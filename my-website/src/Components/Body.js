@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import Cody from "../images/cody.jpg";
+import Skyline from "../images/skyline.jpg";
+import Med from "../images/med.jpg";
+import Money from "../images/money.jpg";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const Name = styled.div`
@@ -68,13 +71,14 @@ text-decoration: underline;
 const ProjImg = styled.div`
 display: flex;
 justify-content: center;
+text-align: center;
 `
 const Imgp = styled.img`
 display: flex;
 justify-content: center;
 margin: 3% auto;
 border-radius: 50%;
-width: 15%;
+width: 50%;
 `
 const About= styled.div`
 display: flex;
@@ -116,7 +120,7 @@ list-style-type: none;
 function Body() {
   return (
     <Main>
-      <Title>
+      <Title id = "title">
         <Name>Cody Townley</Name>
         <Description>Passionate, Hard Working, Dedicated!</Description>
       </Title>
@@ -127,15 +131,15 @@ function Body() {
           I am a Web Developer with a history in the medical field. <br/>
           Technology and problem solving are my passion!
         </Intro>
-        <Proj>
+        <Proj id = "projects">
           <h2>PROJECTS</h2>
           <ProjImg>
-            <Imgp alt = "me" src = {Cody}/>
-            <Imgp alt = "me" src = {Cody}/>
-            <Imgp alt = "me" src = {Cody}/>
+            <a href="https://github.com/Lambda-School-Labs/LabsPT15-cityspire-g-be" title="City Spire app" rel="me" target="_blank"><Imgp alt = "me" src = {Skyline}/>City-Spire</a>
+            <a href="https://github.com/Build-Week-Med-Cabinent-4/backend" title="Med Cabinet" rel="me" target="_blank"><Imgp alt = "me" src = {Med}/>Med Cabinet</a>
+            <a href="https://github.com/Build-Week-Kickstarter-Success/Front-end" title="Kick-Starter Success" rel="me" target="_blank"><Imgp alt = "me" src = {Money}/>Kick-Starter Success</a>
           </ProjImg>
         </Proj>
-        <About>
+        <About id ="about">
           <h2>ABOUT</h2>
           <p>I am a born and raised Kansas native. For the last 10 years I have been working in the medical field and going to school for Pharmacy. 
             My passion has always been in tech and i decided that i wasnt happy in the medical field so I attended Lambda School and learned how to code.
