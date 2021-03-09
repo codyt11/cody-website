@@ -22,9 +22,9 @@ function Body() {
         <proj>
           <h2>PROJECTS</h2>
           <projimg>
-            <a href="https://github.com/Lambda-School-Labs/LabsPT15-cityspire-g-be" title="City Spire app" rel="me" target="_blank"><img alt = "me" src = {Skyline}/>City-Spire</a>
-            <a href="https://github.com/Build-Week-Med-Cabinent-4/backend" title="Med Cabinet" rel="me" target="_blank"><img alt = "me" src = {Med}/>Med Cabinet</a>
-            <a href="https://github.com/Build-Week-Kickstarter-Success/Front-end" title="Kick-Starter Success" rel="me" target="_blank"><img alt = "me" src = {Money}/>Kick-Starter Success</a>
+            <a href="https://github.com/Lambda-School-Labs/LabsPT15-cityspire-g-be" title="City Spire app" rel="noreferrer" target="_blank"><img alt = "me" src = {Skyline}/>City-Spire</a>
+            <a href="https://github.com/Build-Week-Med-Cabinent-4/backend" title="Med Cabinet" rel="noreferrer" target="_blank"><img alt = "me" src = {Med}/>Med Cabinet</a>
+            <a href="https://github.com/Build-Week-Kickstarter-Success/Front-end" title="Kick-Starter Success" rel="noreferrer" target="_blank"><img alt = "me" src = {Money}/>Kick-Starter Success</a>
           </projimg>
         </proj>
         <about>
@@ -36,10 +36,10 @@ function Body() {
           </p>
         </about>
       <footer>
-        <a href="mailto:cwtownley@gmail.com" title="Email me" rel="me" target="_blank"><tag>cwtownley@gmail.com</tag></a>
+        <a href="mailto:cwtownley@gmail.com" title="Email me" rel="noreferrer" target="_blank"><tag>cwtownley@gmail.com</tag></a>
         <ul>
-          <li><a href="https://github.com/codyt11" title="@codyt11 on github" rel="me" target="_blank"><tag><FaGithubSquare /></tag></a></li>
-          <li><a href="https://www.linkedin.com/in/cody-townley/" title="@codyt11 on linked in" rel="me" target="_blank"><tag><FaLinkedin /></tag></a></li>
+          <li><a href="https://github.com/codyt11" title="@codyt11 on github" rel="noreferrer" target="_blank"><tag><FaGithubSquare /></tag></a></li>
+          <li><a href="https://www.linkedin.com/in/cody-townley/" title="@codyt11 on linked in" rel="noreferrer" target="_blank"><tag><FaLinkedin /></tag></a></li>
         </ul>
       </footer>
     </main>
