@@ -4,19 +4,18 @@ import Skyline from "../images/skyline.jpg";
 import Med from "../images/med.jpg";
 import Money from "../images/money.jpg";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
-import './Body.css';
+import '../styles.scss';
 
 function Body() {
   return (
     <main>
       <title>
-        <name class = "name">Cody Townley</name>
-        <description class = "description">Passionate, Hard Working, Dedicated!</description>
+        <p>Cody Townley <br/> Passionate, Hard Working, Dedicated!</p>
       </title>
         <img alt = "me" src = {Cody}/>
         <intro>
-          Welcome to my portfolio. 
-          I am a Web Developer with a history in the medical field. 
+          Welcome to my portfolio.<br/> 
+          I am a Web Developer with a history in the medical field.<br/> 
           Technology and problem solving are my passion!
         </intro>
         <proj>

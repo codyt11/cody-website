@@ -1,6 +1,6 @@
 
 
-.nav li{
+/* .nav li{
     display: flex;
     justify-content: center;
     position: fixed;
@@ -13,9 +13,9 @@
 }
 .nav li ul a:visited{
     color:rgb(182, 156, 12)
-}
+} */
 
-@media(max-width:375px){
+/* @media(max-width:375px){
     
     .nav {
         position: relative;
@@ -51,4 +51,4 @@
         margin-left: -5%;
         width:100%;
     }
-}
+} */
