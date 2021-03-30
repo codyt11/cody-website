@@ -23,7 +23,7 @@ const Nav = () => {
             <ul><a href = "#home">Home</a></ul>
             <ul><a href = "#projects">Projects</a></ul>
             <ul><a href = "#about">About</a></ul>
-            <ul><a href="https://drive.google.com/file/d/1LIvVqNG5uzkqjRi10qkwkgHIdST22VTn/view?usp=sharing" title="my resume" rel="noreferrer" target="_blank">Resume</a></ul> 
+            <ul><a href="https://drive.google.com/file/d/16KCoF9TV2jN1qYFJ8uJ3xqkDW7sa4UvH/view?usp=sharing" title="my resume" rel="noreferrer" target="_blank">Resume</a></ul> 
           
       </div>
   );
