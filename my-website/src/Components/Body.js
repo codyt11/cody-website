@@ -1,7 +1,7 @@
 import React from 'react';
 import Cody from "../images/cody.jpg";
 import Skyline from "../images/skyline.jpg";
-import Med from "../images/med.jpg";
+import Golf from "../images/golf.jpg";
 import Money from "../images/money.jpg";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import '../styles.scss';
@@ -21,8 +21,12 @@ function Body() {
         <proj id = "projects">
           <h2>PROJECTS</h2>
           <projimg>
-            <a href="https://github.com/Lambda-School-Labs/LabsPT15-cityspire-g-be" title="City Spire app" rel="noreferrer" target="_blank"><img alt = "me" src = {Skyline}/>City-Spire</a>
-            <a href="https://github.com/Build-Week-Med-Cabinent-4/backend" title="Med Cabinet" rel="noreferrer" target="_blank"><img alt = "me" src = {Med}/>Med Cabinet</a>
+            <a href="https://github.com/Lambda-School-Labs/LabsPT15-cityspire-g-be" title="City Spire app" rel="noreferrer" target="_blank"><img alt = "city skyline" src = {Skyline}/>City-Spire</a>
+            <div class = "golfApp">
+              <a href="https://github.com/codyt11/GolfersWeatherApp" title="Golfers Weather App" rel="noreferrer" target="_blank"><img alt = "golf course" src = {Golf}/>Golfers Weather github repo</a>
+              <a href="https://musing-hawking-6e60a7.netlify.app/" title="live golf weather app" rel="noreferrer" target="_blank">Golfers Weather app Live</a>
+            </div>
+            
             <a href="https://github.com/Build-Week-Kickstarter-Success/Front-end" title="Kick-Starter Success" rel="noreferrer" target="_blank"><img alt = "me" src = {Money}/>Kick-Starter Success</a>
           </projimg>
         </proj>

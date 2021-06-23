@@ -51,12 +51,16 @@ main proj {
     text-decoration: underline;
 }
 
-main proj projimg{
+proj projimg{
     display: flex;
     justify-content: center;
     text-align: center;
 }
-main proj projimg a img {
+proj projimg .golfApp  a{
+    display: flex;
+    flex-direction: column;
+}
+proj projimg a img {
     display: flex;
     justify-content: center;
     margin: 3% auto;
@@ -65,11 +69,11 @@ main proj projimg a img {
     width: 50%;
     box-shadow: 0 7px 20px 0 rgba(239, 240, 238, 0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
 }
-main proj projimg a:hover{
+proj projimg a:hover{
     
     color:aqua;
 }
-main proj projimg a img:hover{
+proj projimg a img:hover{
     animation: shake 0.5s;
 }
 @keyframes shake {
@@ -85,7 +89,7 @@ main proj projimg a img:hover{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
-main about{
+about{
     display: flex;
     justify-content: center;
     width: 50%;
