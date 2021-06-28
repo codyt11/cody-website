@@ -3,13 +3,13 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    font-size: 3rem;
+    font-size: 3vw;
     color: #000000;
-    padding: 7% 0;
+    padding: 12% 0;
     width: 100%;
 }
 
-intro {
+.intro {
     display: flex;
     justify-content: center;
     padding: 5% 0;
@@ -31,29 +31,29 @@ img{
     margin: 0;
 }
 
-proj {
+.app .proj {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 10% auto;
-    padding-bottom: 10%;
+    margin: 1% auto;
+    padding: 0 1% 15% 1%;
     color: #000000;
     font-size: 1.5rem;
     line-height: 2.5rem;
     text-decoration: underline;
 }
 
-proj projimg{
+.app .proj projimg{
     display: flex;
     justify-content: center;
     text-align: center;
 }
-proj projimg .golfApp  a{
+.app .proj projimg .golfApp  a{
     display: flex;
     flex-direction: column;
 }
-proj projimg a img {
+.app .proj projimg a img {
     display: flex;
     justify-content: center;
     margin: 3% auto;
@@ -62,11 +62,11 @@ proj projimg a img {
     width: 50%;
     box-shadow: 0 7px 20px 0 rgba(239, 240, 238, 0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
 }
-proj projimg a:hover{
+.app .proj projimg a:hover{
     
     color:aqua;
 }
-proj projimg a img:hover{
+.app .proj projimg a img:hover{
     animation: shake 0.5s;
 }
 @keyframes shake {
@@ -82,17 +82,17 @@ proj projimg a img:hover{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
-about{
+.about{
     display: flex;
     justify-content: center;
     width: 50%;
     flex-direction: column;
     align-items: center;
-    margin: 10% auto;
+    margin: 1% auto;
     padding-bottom: 10%;
     color: #000000;
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 
 footer{
@@ -126,6 +126,7 @@ footer ul{
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    background: white;
     width: 100%;
     font-size: 2.5vw;
     box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
@@ -163,53 +164,58 @@ footer ul{
     main {
         background-color: #000000;
     }
+    .title{
+        color:#ffc909;
+        margin: 0 0 2% 0;
+    }
     .nav {
       background-color: #000000;
-      color: #a09002;
+      color: #ffc909;
       border-bottom: #a09002 2px solid ;
     }
     .nav ul a{
-        color:#a09002;
+        color: #ffc909;
     }
     .nav ul a:hover{
         color:#ffffff;
     }
     .dark-mode__toggle {
         background-color:#ffffff;
-        border-color: #a09002;
+        border-color: #ffc909;
         border-width: 10%;
     }
-    title {
-        background-color: #ffffff;
-
-        box-shadow: 0 7px 20px 0 rgba(145, 148, 1, 1), 0 4px 10px 0 rgba(0,0,0,0.2);
-    }
-    intro {
-        color: #a09002;
+    
+    .app .intro {
+        margin: 5% auto;
+        color: #ffc909;
+        size: 2em;
+        text-align: justify;
+        width: 60%;
     }
     .app .pic{
         box-shadow: 0 0px 30px 0px rgba(145, 148, 1, 1);
     }
 
-    proj {
-        color:#a09002;
+    .app .proj {
+        color:#ffc909;
     }
-    proj projimg a{
-        color: #a09002;
+    .app .proj projimg a{
+        color: #ffc909;
     }
-    proj projimg a:hover {
+    .app .proj projimg a:hover {
         color:#ffffff;
     }
-    about{
-        color: #a09002;
+    .app .about{
+        color: #ffc909;
     }
     .toggle{
         background-color: #000000;
-        border-color: #a09002;
+        border-color: #ffc909;
     }
   }
 .loading{
     background-image: url('./images/stars.jpg');
+    background-size: 100vw;
     overflow: hidden;
     font-family: 'roboto';
     
@@ -227,7 +233,7 @@ footer ul{
     display: flex;
     height: 100vh;
     width: 60%;
-    margin: 40% 20% 0 20%;
+    margin: 50% 20% 0 20%;
     perspective: 450px;
 }
 .scroll-text{
@@ -249,4 +255,50 @@ footer ul{
 @keyframes scroll {
 	from { top: 0; transform: translateZ(0) rotateX(15deg); }
 	to { top: -7500px; transform: translateZ(-2000px) rotateX(21deg); }
+}
+
+@media (max-width:400px) {
+    .scroll-text{
+        font-size: 3vw;
+        line-height: 4em;
+        font-weight: bold;
+        text-align: justify;
+        position: relative;
+        animation: scroll 110s linear forwards;
+    }
+    .nav{
+        width: 100vw;
+        padding: 1%;
+    }
+    .nav img{
+        width: 20%;  
+    }
+    .title{
+        padding: 20% 0;
+        font-size: 1em;
+    }
+    .app .proj {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 10% auto;
+        padding-bottom: 10%;
+        color: #000000;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        text-decoration: underline;
+    }
+    .app .proj projimg {
+        font-size: 3vw;
+    }
+    .intro{
+        font-size: 1em;
+    }
+    .about{
+        font-size: 1em;
+    }
+    .about h2{
+        font-size: 1.2em;
+    }
 }
