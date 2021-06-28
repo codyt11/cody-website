@@ -9,7 +9,7 @@ import '../styles.scss';
 function Body() {
   return (
     <div class = "app">
-      <div class= "title">
+      <div class= "title" id = "home">
           <p>Cody Townley <br/> Passionate, Hard Working, Dedicated!</p>
       </div>
       <img  class = "pic" alt = "me" src = {Cody} />
@@ -18,7 +18,7 @@ function Body() {
         I am a Web Developer with a history in the medical field.<br/> 
         Technology and problem solving are my passion!
       </div>
-      <div class = "proj">
+      <div class = "proj" id = "projects">
         <h2>PROJECTS</h2>
         <projimg>
           <a href="https://github.com/Lambda-School-Labs/LabsPT15-cityspire-g-be" title="City Spire app" rel="noreferrer" target="_blank"><img alt = "city skyline" src = {Skyline}/>City-Spire</a>
@@ -30,7 +30,7 @@ function Body() {
           <a href="https://github.com/Build-Week-Kickstarter-Success/Front-end" title="Kick-Starter Success" rel="noreferrer" target="_blank"><img alt = "me" src = {Money}/>Kick-Starter Success</a>
         </projimg>
       </div>
-      <div class = "about">
+      <div class = "about" id = "about">
         <h2>ABOUT</h2>
         <p>I am a born and raised Kansas native. For the last 10 years I have been working in the medical field and going to school for Pharmacy. 
         My passion has always been in tech and i decided that i wasnt happy in the medical field so I attended Lambda School and learned how to code.
