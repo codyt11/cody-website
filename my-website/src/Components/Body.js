@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Cody from "../images/cody.jpg";
 import Skyline from "../images/skyline.jpg";
 import Golf from "../images/golf.jpg";
