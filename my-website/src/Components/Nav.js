@@ -13,7 +13,7 @@ const Nav = () => {
   return (
       
       <div class = "nav">
-        <img class = "logo" src= {Logo}/>
+        <img class = "logo" alt = "ct logo" src= {Logo}/>
         <div class = "button">
           <div>Dark Mode</div>
           <div className="dark-mode__toggle" onClick={toggleMode}>
