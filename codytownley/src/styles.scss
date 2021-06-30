@@ -1,35 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-.title {  
+
+.nav{
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    font-size: 3vw;
-    color: #000000;
-    padding: 12% 0;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    color:rgb(0, 0, 0);
+    background: white;
     width: 100%;
+    font-size: 2.5vw;
+    box-shadow: 0 8px 30px 0 rgba(0,0,0,0.4);
+    border-bottom: black 2px solid;
 }
-
-.intro {
+.nav .logo-dark{
+    width: 25%;
     display: flex;
-    justify-content: center;
-    padding: 5% 0;
+    flex-direction: column;
+    padding-bottom: 2%;
+    align-items: center;
+    align-content: center;
+    margin-left: -5%;
+}
+.nav .logo-dark img{
+    width: 50%;
+    
+}
+button{
+    width:fit-content;
+    font-size: 1vw;
+    transition: all 400ms ease-in-out;
+}
+button:hover{
+    color:#ffffff;
+    background: #000000;
+    transform: scale(1.1);
+    border: #ffffff 2px solid;
+}
+.nav .links{
+    width: 70%;
+}
+.nav .links ul {
+    display: flex;
+    justify-content: space-around;
     color: #000000;
-    font-size: 2rem;
-    line-height: 2.5rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.nav ul a{
+    display: flex;
+    justify-content: space-between;
+    border: #000000 2px solid;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1%;
+    color:rgb(0, 0, 0);
+    transition: all 400ms ease-in-out;
 }
 
-img{
+.nav ul a:hover{
+    color:#ffffff;
+    background: #000000;
+    transform: scale(1.1);
+    border: #ffffff 2px solid;
+    box-shadow: 0 8px 10px rgba(0,0,0,3);   
+}
+.app{
+    padding-top: 15%;
+    border: 10px black solid;
+    
+}
+.app .pic{
     display: flex;
     justify-content: center;
-    margin: 1% auto;
+    margin: 0 auto;
     border-radius: 25%;
     width: 20%;
+    transition: all 400ms ease-in-out;
+}
+.app .pic:hover{
+    transform: scale(1.5);
+    box-shadow: 0 10px 18px;
 }
 
-.nav img{
-    width: 10%;
-    margin: 0;
+.app .intro {
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    font-family: Georgia,times new roman,Times,serif;
+    line-height: 2.5em;
+    margin: 5% auto;
+    font-size: 3vw;
+    text-align: justify;
+    width: 60%;
 }
+
 
 .app .proj {
     display: flex;
@@ -38,35 +104,38 @@ img{
     align-items: center;
     margin: 1% auto;
     padding: 0 1% 15% 1%;
-    color: #000000;
-    font-size: 1.5rem;
+    font-size: 2vw;
     line-height: 2.5rem;
     text-decoration: underline;
 }
 
-.app .proj projimg{
+.app .proj .projimg{
     display: flex;
     justify-content: center;
     text-align: center;
 }
-.app .proj projimg .golfApp  a{
+.app .proj .projimg a{
+    color: #000000;
+}
+.app .proj .projimg .golfApp  a{
     display: flex;
     flex-direction: column;
+    color:#000000;
 }
-.app .proj projimg a img {
+.app .proj .projimg a img {
     display: flex;
     justify-content: center;
     margin: 3% auto;
     border-radius: 50%;
     color:#000000;
     width: 50%;
-    box-shadow: 0 7px 20px 0 rgba(239, 240, 238, 0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.4);
 }
-.app .proj projimg a:hover{
+.app .proj .projimg a:hover{
     
     color:aqua;
 }
-.app .proj projimg a img:hover{
+.app .proj .projimg a img:hover{
     animation: shake 0.5s;
 }
 @keyframes shake {
@@ -98,17 +167,15 @@ img{
 footer{
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
+    font-size: 2em;
     color: #000000;
     margin: 0 auto;
-    background: #eeeeee;
     width: 100%;
-    height: 200px;
-    border: 2px solid #2a2c3b;
-    border-radius: 100% 100% 0 0;
+    height: fit-content;
     align-items: center;
-    line-height: 6rem;
-    box-shadow: 0 7px 20px 0 rgba(242, 243, 237, 0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
+    line-height: 1.5em;
+    border-top: black 2px solid;
+    box-shadow: 0 -8px 30px 0 rgba(0,0,0,0.4);
 }
 footer a{
     color:#000000;
@@ -121,76 +188,50 @@ footer ul{
     display: flex;
     list-style-type: none;
 }
-.nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    background: white;
-    width: 100%;
-    font-size: 2.5vw;
-    box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
-    border-bottom: black 2px solid;
-}
-.nav ul a{
-    color: #000000;
-}
-.dark-mode__toggle {
-    background: rgb(0, 0, 0);
-    border-radius: 50px;
-    border: 1px solid black;
-    height: 2.5vh;
-    position: relative;
-    width: 2.5vw;
-  }
 
-.toggle {
-    background: #fa0303;
-    border:#ffffff .001em solid;
-    border-radius: 50px;
-    height: 2.5vh;
-    position: absolute;
-    transition: 0.2s;
-    width: 1.5vw;
-  }
-  
-.toggled {
-    left: 1vw;
-    height: 100%;
-  }
 .dark-mode {
+    /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto !important;} /* End https://www.cursors-4u.com */
     color: #fff;
-    background-color: #000000;
+    background-image: url('./images/stars.jpg');
+    background-size: auto;
     main {
         background-color: #000000;
     }
-    .title{
-        color:#ffc909;
-        margin: 0 0 2% 0;
-    }
+    
     .nav {
       background-color: #000000;
       color: #ffc909;
       border-bottom: #a09002 2px solid ;
     }
+    .nav .logo-dark{
+        width: 30%;   
+    }
+    .nav .logo-dark img{
+        width: 60%;   
+    }
     .nav ul a{
         color: #ffc909;
     }
-    .nav ul a:hover{
-        color:#ffffff;
+    .nav ul .home:hover{
+        color: #ffffff;
+        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px purple, 0 0 25px purple;
+        box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px purple, 0 0 25px purple;
     }
-    .dark-mode__toggle {
-        background-color:#ffffff;
-        border-color: #ffc909;
-        border-width: 10%;
+
+    .nav ul .projects:hover{
+        color: #ffffff;
+        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px blue, 0 0 25px blue;
+        box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px blue, 0 0 25px blue;
+    }
+
+    .nav ul .resume:hover{
+        color: #ffffff;
+        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red, 0 0 25px red;
+        box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red, 0 0 25px red;
     }
     
     .app .intro {
-        margin: 5% auto;
-        color: #ffc909;
-        size: 2em;
-        text-align: justify;
-        width: 60%;
+        color: #ffc909;   
     }
     .app .pic{
         box-shadow: 0 0px 30px 0px rgba(145, 148, 1, 1);
@@ -198,20 +239,31 @@ footer ul{
 
     .app .proj {
         color:#ffc909;
+        font-size: 1em;
+        line-height: 1.5em;
     }
-    .app .proj projimg a{
+    .app .proj .projimg a{
         color: #ffc909;
     }
-    .app .proj projimg a:hover {
-        color:#ffffff;
+    .app .proj .projimg a:hover {
+        color: #ffffff;
+        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
     }
     .app .about{
         color: #ffc909;
     }
-    .toggle{
-        background-color: #000000;
-        border-color: #ffc909;
+    footer{
+        color: #ffffff;
+        font-size: 1em;
+        a{
+            color:#ffffff;
+        }
+        ul li tag{
+            color:#ffffff;
+            
+        }
     }
+   
   }
 .loading{
     background-image: url('./images/stars.jpg');
@@ -270,12 +322,26 @@ footer ul{
         width: 100vw;
         padding: 1%;
     }
-    .nav img{
-        width: 20%;  
+    .nav .logo-dark img{
+        width: 75%;  
     }
-    .title{
-        padding: 20% 0;
-        font-size: 1em;
+    .nav ul a{
+        border: #000000 .5vw solid;
+    }
+    .nav ul a:hover{
+        border: #ffffff .5vw solid;   
+    }
+    .nav .logo-dark .button .dark-mode__toggle{
+        height:1.5vh;
+        width: 4vw;
+    }
+    .nav .logo-dark .button .dark-mode__toggle .toggle{
+        height: 1.65vh;
+        margin-top: -.2vh;
+        width: 2.5vw;
+    }
+    .app{
+        padding-top: 30%;
     }
     .app .proj {
         display: flex;
@@ -297,6 +363,7 @@ footer ul{
     }
     .about{
         font-size: 1em;
+        width: 75%;
     }
     .about h2{
         font-size: 1.2em;
