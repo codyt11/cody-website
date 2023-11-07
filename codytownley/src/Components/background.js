@@ -2,26 +2,7 @@ import React, { useEffect } from "react";
 import "./background.scss";
 
 function BackgroundAnimation() {
-  // const updatePosition = (element) => {
-  //   const velocity = { x: Math.random() * 4 - 2, y: Math.random() * 4 - 2 }; // Random velocity
-  //   const bounds = document.body.getBoundingClientRect();
   
-  //   const move = () => {
-  //     requestAnimationFrame(move);
-  //     let currentX = parseFloat(element.style.left);
-  //     let currentY = parseFloat(element.style.top);
-  
-  //     // Check for collisions with the window edges
-  //     if (currentX <= 0 || currentX >= bounds.width) velocity.x *= -1;
-  //     if (currentY <= 0 || currentY >= bounds.height) velocity.y *= -1;
-  
-  //     // Update position
-  //     element.style.left = `${currentX + velocity.x}px`;
-  //     element.style.top = `${currentY + velocity.y}px`;
-  //   };
-  
-  //   move(); // Start the animation
-  // };
   useEffect(() => {
     const shapes = document.querySelectorAll('.floating');
     const bounds = document.querySelector('.back-shapes').getBoundingClientRect();

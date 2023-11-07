@@ -10,7 +10,7 @@ function App() {
 
   return (
     <app>
-      <div class="loaded">
+      <div className = "loaded">
         <Nav/>  
         <Body/>
       </div>

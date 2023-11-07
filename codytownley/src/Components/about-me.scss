@@ -1,0 +1,146 @@
+/* Modal Styles */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+.modal {
+    display: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    z-index: 1000; /* Sit on top */
+    left: 50%; /* Center the modal horizontally */
+    top: 50%; /* Center the modal vertically */
+    width: 80vw; /* Width of the modal */
+    height: 80vh; /* Height of the modal */
+    background-color: rgba(48, 47, 47, 0.877); /* White background */
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%); /* Shift the modal to be centered perfectly */
+  }
+
+  .modal.open{
+    display: flex;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #000000e8;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%; /* Responsive width */
+    height: 80vh; /* 60% of the viewport height */
+    display: flex;
+    flex-direction: row; /* This ensures that children are side by side */
+  }
+  
+  .modal-left, .modal-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-right {
+    position: relative;
+    background-color: #000000fb;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+  
+  .modal-left {
+    border-right: 1px solid #888888a8; /* Separation line */
+    background-color: #fffdfdf8;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+    h1{
+        margin-top: 10%;
+    }
+    .about-text {
+        text-align: left;
+        margin-bottom: 20px;
+        color: #000000 !important;
+        font-size: 1.25rem !important; /* Ensure this is the desired size, as 0.5rem is quite small */
+        padding: 5%;
+        font-family: "Montserrat Medium";
+        transform: scale(0.94);
+        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+  }
+span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  .animate-span {
+    animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    /* Remove the delay here as it will be set inline by the JavaScript */
+  }
+  
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  
+  
+  .big-about{
+    font-size: 10rem;
+    position:absolute;
+    left: 35%;
+    top:-5%;
+    color: rgba(192, 192, 192, 0.192);
+    z-index: 0;
+  }
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 20%;
+    align-items: center;
+  }
+  
+  .social-links .social-link {
+    margin: 5px;
+    text-decoration: none;
+    color: #63d35f;
+    font-size: 3rem; /* Adjust the size as needed */
+  }
+  
+  .modal-right form {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Adjust width as needed */
+  }
+  
+  .modal-right input, .modal-right textarea, .modal-right button {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .modal-right button {
+    cursor: pointer;
+    /* Add more button styles here */
+  }
+  
+  /* The Close Button (if you need one) */
+  .close-button {
+    position: absolute; /* Position it relative to the modal container */
+    top: 10px; /* Space from the top */
+    right: 10px; /* Space from the right */
+    font-size: 2rem; /* Size of the 'X' */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    color: #fff; /* Color of the 'X', change as needed */
+    z-index: 10; /* Ensure it's above other modal content */
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
