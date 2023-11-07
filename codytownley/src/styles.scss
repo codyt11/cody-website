@@ -1,187 +1,438 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    color:rgb(0, 0, 0);
-    background: white;
-    width: 100%;
-    font-size: 2.5vw;
-    box-shadow: 0 8px 30px 0 rgba(0,0,0,0.4);
-    border-bottom: black 2px solid;
-}
-.nav .logo-dark{
-    width: 25%;
-    display: flex;
+
+.hamburger {
+    display: none; /* Hidden by default */
     flex-direction: column;
-    padding-bottom: 2%;
-    align-items: center;
-    align-content: center;
-    margin-left: -5%;
-}
-.nav .logo-dark img{
-    width: 50%;
-    
-}
-button{
-    width:fit-content;
-    font-size: 1vw;
-    transition: all 400ms ease-in-out;
-}
-button:hover{
-    color:#ffffff;
-    background: #000000;
-    transform: scale(1.1);
-    border: #ffffff 2px solid;
-}
-.nav .links{
-    width: 70%;
-}
-.nav .links ul {
-    display: flex;
     justify-content: space-around;
-    color: #000000;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position:relative;
+    margin: 1vh 10%;
+}
+
+/* Hamburger lines */
+.hamburger span {
+    display: block;
     width: 100%;
-    margin: 0 auto;
-    
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s linear;
 }
-.nav ul a{
-    display: flex;
+
+.nav{
+    display:flex;
+    height: 5rem;
+    padding: 0 15%;
     justify-content: space-between;
-    border: #000000 2px solid;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
-    margin: 0 auto;
-    width: fit-content;
-    padding: 1%;
-    color:rgb(0, 0, 0);
-    transition: all 400ms ease-in-out;
+    background-color: #000000;
+    
+    .logo-dark{
+        display: flex;
+        justify-content: left;
+        width: auto;
+        max-width: 120px;
+        height: 100%;
+        margin: -1vh 2rem;
+        font-family: cursive;
+        color: #ccc;
+        margin: -1vh 2rem 5vw 0;
+        .letter{
+        font-size: 4vw;
+        
+    }
+    }
+    .links{
+        margin: 1.75rem 5%;
+        width: auto;
+        max-width: 600px;
+        text-decoration: none;
+        
+        ul{
+            display: flex;
+            justify-content: space-between; 
+            list-style: none;
+            a{
+                color: rgba(230, 230, 230, 0.644);
+                text-decoration: none;
+                font-family: 'League Spartan',Helvetica,Arial,sans-serif;
+                font-size: 1.5rem;
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}
+/* Hamburger Menu - outside media query since it needs to be `display:none` on larger screens */
+
+
+@media (max-width: 768px) {
+    /* ... your existing styles ... */
+    
+    /* Display the hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Initially hide the links */
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Show links when hamburger is toggled */
+    .links.active {
+        display: flex;
+        background-color: #008337;
+    }
+
+    .links ul {
+        width: 100%;
+        padding: 0; /* Reset any padding */
+    }
+
+    .links ul li a {
+        display: block;
+        width: 10%;
+        padding: 15px; /* Larger hit area for links */
+        text-align: right; /* Center the link texts */
+    }
 }
 
-.nav ul a:hover{
-    color:#ffffff;
-    background: #000000;
-    transform: scale(1.1);
-    border: #ffffff 2px solid;
-    box-shadow: 0 8px 10px rgba(0,0,0,3);   
-}
 .app{
-    padding-top: 15%;
-    border: 10px black solid;
+    height: 100%;
+    z-index: 1;
+    margin: auto;
+    background-color: #000000;
     
-}
-.app .pic{
+   .main{
+    position: relative;
     display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    border-radius: 25%;
-    width: 20%;
-    transition: all 400ms ease-in-out;
-}
-.app .pic:hover{
-    transform: scale(1.5);
-    box-shadow: 0 10px 18px;
-}
-
-.app .intro {
-    display: flex;
-    justify-content: center;
-    color: #000000;
-    font-family: Georgia,times new roman,Times,serif;
-    line-height: 2.5em;
-    margin: 5% auto;
-    font-size: 3vw;
-    text-align: justify;
-    width: 60%;
-}
-
-
-.app .proj {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    margin: 1% auto;
-    padding: 0 1% 15% 1%;
-    font-size: 2vw;
-    line-height: 2.5rem;
-    text-decoration: underline;
-}
-
-.app .proj .projimg{
-    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 1;
+    .page1{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        font-size: 1rem;
+        position: relative;
+
+        .about-me{
+        font-family: 'League Spartan',Helvetica,Arial,sans-serif;
+        font-size: .875rem;
+        letter-spacing: 3px;
+        padding: 12px 20px;
+        background-color: #008337;
+        background: linear-gradient(270deg,#6cf19dbd,#008337);
+        color: #fff;
+        position: relative;
+        transition: all .3s;
+        }
+        .logo{
+            position: absolute;
+            margin-left: .1rem;
+            font-size: 50rem;
+            color: transparent; /* Make the text color transparent */
+            background-color: #008337;
+            background: linear-gradient(270deg, #008337, #6cf19dbd);
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-background-clip: text; /* Clip the background over the text */
+            background-clip: text; /* Standard syntax, not widely supported */
+            z-index: 1;
+        }
+        .title-info, .logo{
+            margin-top: -10rem;
+        }
+        .title-info{
+            position: relative;
+            right:40%;
+            z-index: 2;
+            .myName {
+                font-size: 5rem;
+                color: rgb(255, 255, 255);
+            }
+            p{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: #ffffff;
+                font-size: 1.5rem;
+            }
+        }
+        .social-media-toolbar {
+            position:fixed;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);  // This centers the toolbar vertically.
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;  // Spacing between links.
+            z-index: 1;
+            
+            a {
+                color: rgb(172, 172, 172);  // Or any other desired color.
+                font-size: 3vw;  // Adjust the icon size as needed.
+                transition: color 0.3s;  // Optional: for a smooth color transition on hover.
+        
+                &:hover {
+                    color: #008337;  // Or any other desired hover color.
+                }
+            }
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin-left: auto;
+             margin-right: auto;
+            right: 45%;
+            top: 38%;
+            font-size: 2vh;
+            z-index: 3;
+          }
+          .works{
+            color: #fff;
+            text-align: center;
+          }
+          
+          .item:hover {
+            color: white;
+            font-weight: normal;
+          }
+          
+          .item:hover i {
+            color: white;
+          }
+          
+          i {
+            color: #008337;
+            margin: 0 auto;
+            height: 100%;
+          }
+          i.arrow1 {
+            display: block; /* Makes the icon behave like a block for margin-auto to work */
+            margin: 0 auto; /* Centers the arrow horizontally */
+            animation: slide1 1.5s ease-in-out infinite;
+            height: 100px; /* You can adjust this to make the arrow longer */
+          }
+          
+          @keyframes slide1 {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+          
+            50% {
+              transform: translateY(20px);
+            }
+          }
+    }
+    
+      
+    }
+    
+    .backwrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      z-index: 0; // This will ensure that the background stays behind the content
+    }
+    .projects {
+        background-color: #ffffff;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center everything horizontally */
+        align-items: center; /* Center everything vertically */
+        height: 50%;
+        padding-bottom: 5%;
+        z-index: 1;
+    }
+    .vert-line{
+        border-left: #00000067 1px solid;
+        border-right: #00000067 1px solid;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center everything horizontally */
+        align-items: center; /* Center everything vertically */
+    }
+    .vert-line::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1px; /* Width of the vertical lines */
+        height:100%;
+        background-color: #00000067; /* Color of the vertical lines */
+    }
+
+    .vert-line::before {
+        left: 50%; /* Position the left vertical line */
+    }
+
+    .projects-title{
+        font-family: 'League Spartan',Helvetica,Arial,sans-serif;
+        font-size: 2rem;
+        padding-top: 5%;
+    }
+    .project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        height: 450px;
+        margin: 5% 0;
+        margin-bottom: 3%;
+        z-index: 2;
+        background-size: cover; /* Cover the entire space of the div */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
+    }
+    .project-content {
+        position: relative;
+        z-index: 2; /* Above the ::before pseudo-element */
+        transition: transform 2s ease-in, font-size .5s ease-in;
+      }
+      
+      .project-number {
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        background-color: transparent; /* Semi-transparent white */
+        padding: 5px;
+        z-index: 2; /* Above the ::before pseudo-element */
+        color: #000; /* Color of the number */
+        transition: opacity 2s ease, font-size 1s ease;
+        opacity: 0; /* Start with the number invisible */
+      }
+      
+      .project::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #6cf19dbd;
+        z-index: 1; /* Below the content and number */
+        transform: translateX(-100%);
+        transition: transform 1s ease;
+      }
+      
+      .project:hover::before {
+        transform: translateX(0%);
+      }
+      
+      .project:hover .project-number {
+        opacity: 1; 
+        margin-top: -5%;
+        font-size: 6rem;
+        animation: bounce1 .75s ease-in-out .5s 3;
+        color:#fff
+      }
+      @keyframes bounce1 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+      
+        50% {
+          transform: translateY(20px);
+        }
+      }
+      .project:hover .project-content {
+        opacity: 1; 
+        font-size: 3rem;
+        color:#fff
+      }
+      
+      /* Adjust the margin for odd and even projects if necessary */
+      .project:nth-child(odd) {
+        margin-right: 5%;
+      }
+      
+      .project:nth-child(even) {
+        margin-left: 5%;
+      }
+  .fun{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #ffffff;
+    align-items: center;
     text-align: center;
-}
-.app .proj .projimg a{
-    color: #000000;
-}
-.app .proj .projimg .golfApp  a{
-    display: flex;
-    flex-direction: column;
-    color:#000000;
-}
-.app .proj .projimg a img {
-    display: flex;
-    justify-content: center;
-    margin: 3% auto;
-    border-radius: 50%;
-    color:#000000;
-    width: 50%;
-    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.4);
-}
-.app .proj .projimg a:hover{
-    
-    color:aqua;
-}
-.app .proj .projimg a img:hover{
-    animation: shake 0.5s;
-}
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    height: 450px;
+    padding-top: 5%;
+    z-index: 3;
+    .fun-projects{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 20px 60px 0 rgba(0,0,0,0.5);
+      .fun-project{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: #000 1px solid;
+      }
+    }
   }
-.about{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    flex-direction: column;
-    align-items: center;
-    margin: 1% auto;
-    padding-bottom: 10%;
-    color: #000000;
-    font-size: 2rem;
-    line-height: 3rem;
 }
+
+
+
 
 footer{
     display: flex;
     flex-direction: column;
     font-size: 2vw;
-    color: #000000;
+    color: #ffffff;
     margin: 0 auto;
     width: 100%;
-    height: fit-content;
+    height: 400px;
     align-items: center;
+    justify-content: center;
     line-height: 1.5em;
     border-top: black 2px solid;
     box-shadow: 0 -8px 30px 0 rgba(0,0,0,0.4);
+    z-index: 3;
+    .logo{
+      font-size: 5rem;
+      color: #008337;
+      font-family: cursive;
+      margin-bottom: 4%;
+      z-index: 1;
+  }
 }
 footer a{
-    color:#000000;
+    color:#ffffff;
 }
-footer ul li tag{
-    color:#000000;
+footer a:hover{
+    color:#008337;
+}
+footer ul li {
+    color:#ffffff;
     padding: 0 10px;
 }
 footer ul{
@@ -189,185 +440,3 @@ footer ul{
     list-style-type: none;
 }
 
-.dark-mode {
-    /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto !important;} /* End https://www.cursors-4u.com */
-    color: #fff;
-    background-image: url('./images/stars.jpg');
-    background-size: auto;
-    main {
-        background-color: #000000;
-    }
-    
-    .nav {
-      background-color: #000000;
-      color: #ffc909;
-      border-bottom: #a09002 2px solid ;
-    }
-    .nav .logo-dark{
-        width: 30%;   
-    }
-    .nav .logo-dark img{
-        width: 60%;   
-    }
-    .nav ul a{
-        color: #ffc909;
-    }
-    .nav ul .home:hover{
-        color: #ffffff;
-        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px purple, 0 0 25px purple;
-        box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px purple, 0 0 25px purple;
-    }
-
-    .nav ul .projects:hover{
-        color: #ffffff;
-        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px blue, 0 0 25px blue;
-        box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px blue, 0 0 25px blue;
-    }
-
-    .nav ul .resume:hover{
-        color: #ffffff;
-        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red, 0 0 25px red;
-        box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red, 0 0 25px red;
-    }
-    
-    .app .intro {
-        color: #ffc909;   
-    }
-    .app .pic{
-        box-shadow: 0 0px 30px 0px rgba(145, 148, 1, 1);
-    }
-
-    .app .proj {
-        color:#ffc909;
-        font-size: 1em;
-        line-height: 1.5em;
-    }
-    .app .proj .projimg a{
-        color: #ffc909;
-    }
-    .app .proj .projimg a:hover {
-        color: #ffffff;
-        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
-    }
-    .app .about{
-        color: #ffc909;
-    }
-    footer{
-        color: #ffffff;
-        a{
-            color:#ffffff;
-        }
-        ul li tag{
-            color:#ffffff;
-            
-        }
-    }
-   
-  }
-.loading{
-    background-image: url('./images/stars.jpg');
-    background-size: 100vw;
-    overflow: hidden;
-    font-family: 'roboto';
-    
-    position: relative;
-}
-.loading::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(20,20,20,1) 40%, rgba(20,20,20,0) 100%);
-  }
-.wrapper{
-    display: flex;
-    height: 100vh;
-    width: 60%;
-    margin: 50% 20% 0 20%;
-    perspective: 450px;
-}
-.scroll-text{
-    color: #ffc909;
-    font-size: 2vw;
-    line-height: 2em;
-    font-weight: bold;
-    text-align: justify;
-    position: relative;
-    animation: scroll 100s linear forwards;
-}
-
-.scroll-text h1, h2{
-    text-align: center;
-    font-size: 3.5vw;
-    line-height: 4em;
-}
-
-@keyframes scroll {
-	from { top: 0; transform: translateZ(0) rotateX(15deg); }
-	to { top: -7500px; transform: translateZ(-2000px) rotateX(21deg); }
-}
-
-@media (max-width:400px) {
-    .scroll-text{
-        font-size: 3vw;
-        line-height: 4em;
-        font-weight: bold;
-        text-align: justify;
-        position: relative;
-        animation: scroll 130s linear forwards;
-    }
-    .nav{
-        width: 100vw;
-        padding: 1%;
-    }
-    .nav .logo-dark img{
-        width: 75%;  
-    }
-    .nav ul a{
-        border: #000000 .5vw solid;
-    }
-    .nav ul a:hover{
-        border: #ffffff .5vw solid;   
-    }
-    .nav .logo-dark .button .dark-mode__toggle{
-        height:1.5vh;
-        width: 4vw;
-    }
-    .nav .logo-dark .button .dark-mode__toggle .toggle{
-        height: 1.65vh;
-        margin-top: -.2vh;
-        width: 2.5vw;
-    }
-    .app{
-        padding-top: 30%;
-    }
-    .app .proj {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin: 10% auto;
-        padding-bottom: 10%;
-        color: #000000;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        text-decoration: underline;
-    }
-    .app .proj projimg {
-        font-size: 3vw;
-    }
-    .intro{
-        font-size: 1em;
-    }
-    .about{
-        font-size: 1em;
-        width: 75%;
-    }
-    .about h2{
-        font-size: 1.2em;
-    }
-    footer{
-        font-size: 1em;
-    }
-}

@@ -1,33 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles.scss';
-import { useDarkMode } from '../hooks/useDarkMode';
-import Logo from "../images/logo.svg";
-
+// Import the Golf image if needed: import Golf from "../images/golf.jpg";
 
 const Nav = () => {
-  const [darkMode, setDarkMode] = useDarkMode(false);
-  const toggleDark = e => {
-    e.preventDefault();
-    setDarkMode(!darkMode);
+  // State to handle the visibility of the nav links on mobile view
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  // Function to toggle the nav visibility
+  const toggleNav = () => {
+    setIsNavVisible(!isNavVisible);
   };
+
   return (
-      
-      <div class = "nav">
-        <div class = "logo-dark">
-          <img class = "logo" alt = "ct logo" src= {Logo}/>
-          <button onClick={toggleDark}>
-            <div>Dark Mode</div>
-          </button>
-        </div>
-        <div class = "links">
-          <ul>
-            <a class = "home" href = "#home" >Home</a>
-            <a class = "projects" href = "#projects">Projects</a>
-            <a class = "resume" href="https://drive.google.com/file/d/16KCoF9TV2jN1qYFJ8uJ3xqkDW7sa4UvH/view?usp=sharing" title="my resume" rel="noreferrer" target="_blank">Resume</a>
-          </ul>
-        </div>    
-          
+    <div className="nav">
+      <div className="logo-dark" href="#home">
+        <div className='letter'>C</div>
       </div>
+     
+      <button 
+        className={`hamburger ${isNavVisible ? 'active' : ''}`} 
+        aria-label="Toggle menu" 
+        aria-expanded={isNavVisible} 
+        onClick={toggleNav}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div className={`links ${isNavVisible ? 'active' : ''}`}>
+        <ul>
+          <li><a className="projects" href="#projects">Projects</a></li>
+          <li><a className="fun" href="#fun">Fun</a></li>
+          <li><a className="contact" href="#contact">Contact</a></li>
+        </ul>
+      </div>    
+    </div>
   );
 }
 
