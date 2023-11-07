@@ -1,8 +1,6 @@
 import React from 'react';
 import Cody from "../images/cody.jpg";
-import Skyline from "../images/skyline.jpg";
 import Golf from "../images/golf.jpg";
-import Money from "../images/money.jpg";
 import BackgroundAnimation from "./background";
 import { FaLinkedin, FaGithubSquare, FaGitlab } from "react-icons/fa";
 import '../styles.scss';
