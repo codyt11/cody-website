@@ -1,7 +1,8 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import Cody from "../images/cody.jpg";
 import Golf from "../images/golf.jpg";
 import BackgroundAnimation from "./background";
+import AboutMe from './about-me';
 import { FaLinkedin, FaGithubSquare, FaGitlab } from "react-icons/fa";
 import '../styles.scss';
 
@@ -14,18 +15,26 @@ function Body() {
     {id:3, name: "project3", img:Golf},
     {id:4, name: "project4", img:Golf}
   ]
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    console.log(`Is modal open: ${isModalOpen}`);
+  }, [isModalOpen]);
+
   return (
-    <div class = "app">
+    <div className = "app">
       <div className='main'>
       <BackgroundAnimation/>
         <div className='page1'>
-          <div className='title-info'>
-            
+          <div className='title-info'>  
+          <AboutMe isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
             <div className='myName'>
-            Cody Townley
+              Cody Townley
             </div>
             <p>Full Stack Developer</p>
-            <button className='about-me'>About Me</button>
+            <button className="about-me" onClick={() => setIsModalOpen(!isModalOpen)}>
+              About Me
+            </button>
           </div>
           <div className='logo'>
             C
@@ -41,9 +50,9 @@ function Body() {
               <FaGitlab />
             </a>
           </div>
-          <div class="item">
+          <div className="item">
             <div className='works'>WORKS</div>
-            <i class="fa fa-long-arrow-down arrow1" aria-hidden="true"></i>
+            <i className="fa fa-long-arrow-down arrow1" aria-hidden="true"></i>
           </div>
         </div>
         <div className='projects'>
