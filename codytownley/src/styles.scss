@@ -29,6 +29,9 @@
     padding: 0 15%;
     justify-content: space-between;
     background-color: #000000;
+    position:fixed;
+    z-index: 4;
+    width: 100vw;
     
     .logo-dark{
         display: flex;
@@ -40,8 +43,10 @@
         font-family: cursive;
         color: #ccc;
         margin: -1vh 2rem 5vw 0;
+        text-decoration: none;
         .letter{
         font-size: 4vw;
+        
         
     }
     }
@@ -323,63 +328,64 @@
     }
     .project {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
         width: 100%;
         max-width: 100%;
         height: 450px;
         margin: 15% 0;
         margin-bottom: 3%;
         z-index: 2;
-        background-size: cover; /* Cover the entire space of the div */
-        background-position: center; /* Center the background image */
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
         overflow: hidden;
-        position: relative;
         box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
     }
     .project-content {
-        position: relative;
+        position: absolute;
+        margin-right: 15px;
+        right: 0;
+        top: 0;
         z-index: 2; /* Above the ::before pseudo-element */
         transition: transform 2s ease-in, font-size .5s ease-in;
       }
       
       .project-number {
-        position: absolute;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
-        background-color: transparent; /* Semi-transparent white */
-        padding: 5px;
-        z-index: 2; /* Above the ::before pseudo-element */
-        color: #000; /* Color of the number */
-        transition: opacity 2s ease, font-size 1s ease;
+        position: absolute; /* Changed from relative to absolute */
+        right: 0;
+        top: 0;
         opacity: 0; /* Start with the number invisible */
-      }
+        margin-top: 25px; /* Adjust padding as needed */
+        margin-right: 5px;
+        font-size: 2rem; /* Initial font size, adjust as needed */
+        color: #000; /* Initial color, adjust as needed */
+        transition: opacity 2s ease, font-size 1s ease; /* Transition effects */
+    }
+    
+    .project:hover .project-number {
+        opacity: 1;
+        font-size: 6rem; /* Increased font size on hover */
+        color: #008337; /* Color change on hover */
+        animation: bounce1 .75s ease-in-out .5s 3;
+    }
       
-      .project::before {
+      .project::after {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #6cf19dbd;
+        background-color: rgba(0,0,0,.75);
         z-index: 1; /* Below the content and number */
-        transform: translateX(-100%);
-        transition: transform 1s ease;
       }
       
-      .project:hover::before {
-        transform: translateX(0%);
+      .project:hover::after {
+        transform: translateX(100%);
+        transition: 1s ease;
+        background-color: rgba(0,0,0,.45);
       }
       
-      .project:hover .project-number {
-        opacity: 1; 
-        margin-top: -5%;
-        font-size: 6rem;
-        animation: bounce1 .75s ease-in-out .5s 3;
-        color:#fff
-      }
       @keyframes bounce1 {
         0%,
         100% {
@@ -393,7 +399,7 @@
       .project:hover .project-content {
         opacity: 1; 
         font-size: 3rem;
-        color:#fff
+        color:#008337;
       }
       
       /* Adjust the margin for odd and even projects if necessary */

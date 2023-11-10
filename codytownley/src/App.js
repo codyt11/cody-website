@@ -1,21 +1,24 @@
-
 import React from 'react';
-import './App.css';
-import Nav from "./Components/Nav"
-import Body from './Components/Body';
-import './styles.scss';
+import { Routes, Route, BrowserRouter as Router} from 'react-router-dom';
+import Nav from "./Components/Nav";
+import Home from './Pages/Home';
+import Crown from './Pages/CrownClothing';
+import Crestview from './Pages/Crestview';
+import LiveChat from './Pages/LiveChat';
 
-
-function App() {
-
+const App = () => {
   return (
-    <app>
-      <div className = "loaded">
-        <Nav/>  
-        <Body/>
-      </div>
-    </app>
+    <Router>
+      <Nav/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/crown" element={<Crown />} />
+        <Route path="/crestview" element={<Crestview />} />
+        <Route path="/live" element={<LiveChat />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+

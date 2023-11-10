@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.scss';
 // Import the Golf image if needed: import Golf from "../images/golf.jpg";
 
@@ -13,9 +14,9 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <div className="logo-dark" href="#home">
-        <div className='letter'>C</div>
-      </div>
+      <Link to="/" className="logo-dark">
+          <div className='letter'>C</div>
+      </Link>
      
       <button 
         className={`hamburger ${isNavVisible ? 'active' : ''}`} 
@@ -30,9 +31,9 @@ const Nav = () => {
       
       <div className={`links ${isNavVisible ? 'active' : ''}`}>
         <ul>
-          <li><a className="projects" href="#projects">Projects</a></li>
-          <li><a className="fun" href="#fun">Fun</a></li>
-          <li><a className="contact" href="#contact">Contact</a></li>
+        <li><Link to="/#projects">Projects</Link></li>
+        <li><Link to="/#fun">Fun</Link></li>
+        <li><Link to="/#contact">Contact</Link></li>
         </ul>
       </div>    
     </div>
