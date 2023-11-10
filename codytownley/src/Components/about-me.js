@@ -31,13 +31,35 @@ function AboutMe({ isModalOpen, setIsModalOpen }) {
       };
     
       // Handle form submission
-      const handleSubmit = (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
-        // Process form data here, e.g., send to an API or validate inputs
+        
+        // Log the formData to the console
         console.log(formData);
-        // Clear form after submission if needed
-        setFormData({name: '', email: '', message: ''});
-      };
+    
+        // Send the formData to your API
+        try {
+            const response = await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+    
+            // Check if the request was successful
+            if (response.ok) {
+                console.log('Email sent successfully');
+                // Clear form after successful submission
+                setFormData({name: '', email: '', message: ''});
+            } else {
+                console.log('Failed to send email');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    };
+    
 
   return (
     <div id="contactModal" className={`modal ${isModalOpen ? "open" : ""}`}>
