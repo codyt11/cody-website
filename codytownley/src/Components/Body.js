@@ -2,7 +2,6 @@ import {React, useState, useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 import Crwn from "../images/crwn.mp4";
 import Live from "../images/livechat.mp4";
-import Test from "../images/testrecord.mp4";
 import Crestview from "../images/crestview.mp4";
 import BackgroundAnimation from "./background";
 import AboutMe from './about-me';
