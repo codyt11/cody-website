@@ -31,7 +31,7 @@
     background-color: #000000f5;
     position:fixed;
     z-index: 4;
-    width: 100vw;
+    width: 100%;
     
     .logo-dark{
         display: flex;
@@ -45,7 +45,7 @@
         margin: -1vh 2rem 5vw 0;
         text-decoration: none;
         .letter{
-        font-size: 4vw;
+        font-size: 4em;
         
         
     }
@@ -159,7 +159,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     z-index: 1;
     .page1{
@@ -354,7 +354,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 100vw;
+      width: 100%;
       z-index: 0; // This will ensure that the background stays behind the content
     }
     .projects {
