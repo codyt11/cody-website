@@ -1,4 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;800&family=Libre+Baskerville:ital@1&display=swap');
+
 .crown-main{
+    display:flexbox;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
-    padding-top: 75px;
+
+    .display-top{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 1400px;
+        .project-video {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw; /* This will span the full viewport width */
+            height: 1000px; /* Set the height to 500px */
+        
+            .video-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%; /* This will span the full width of the .project-video div */
+                height: 100%; /* This will span the full height of the .project-video div */
+                object-fit: cover; /* Ensures the video covers the div without stretching */
+                z-index: -1;
+            }
+
+            &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.8);
+                z-index: 0;
+            }
+        
+            .title, .short-about {
+                padding-top: 3%;
+                font-family: 'League Spartan',Helvetica,Arial,sans-serif;
+                position: absolute;
+                color: #fff;
+                line-height: 2rem;
+
+                text-shadow:
+                        -2px 2px 0 #0000009a,  
+                        1px -1px 0 #0000009a,
+                        -1px 1px 0 #0000009a,
+                        1px 1px 0 #0000009a; 
+                z-index: 2; /* Ensure they are above the video */
+            }
+        
+            .title {
+                font-size: 5rem;
+                top: 40%; /* Adjust as needed */
+            }
+        
+            .short-about {
+                font-size: 2rem;
+                top: 50%; /* Adjust as needed */
+                font-family: 'Libre Baskerville', serif;
+            }
+            .roles {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                width: 80%;
+                margin-top: auto;
+                z-index: 2;
+                color: #ffffff;
+                text-shadow:
+                        -1px -1px 1px #00000060,  
+                        1px -1px 0 #00000060,
+                        -1px 1px 0 #00000060,
+                        1px 1px 0 #00000060; 
+                
+                span{
+                    color: #00ff6a !important;
+                    text-shadow:
+                        -1px -1px 1px #00000060,  
+                        1px -1px 0 #00000060,
+                        -1px 1px 0 #00000060,
+                        1px 1px 0 #00000060; 
+                    opacity: 100%!important;
+                    filter:none!important;
+                }
+            
+                .my-role, .context, .period {
+                    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+                    font-weight: bolder;
+                }
+            }
+            
+        }
+        .project-about{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            line-height: 2em;
+            height:40%;
+            background-color: rgb(0, 0, 0);
+            z-index: 2;
+            .about-text{
+                width: 50%;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3%;
+                .about-text-title{
+                    font-size: 2rem;
+                    padding-bottom: 2%;
+                }
+            }
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 1% 0;
+    transform: translate(0, -50%);
+}
+
+.link_wrapper{
+  display: flex;
+  
+}
+
+.to-link{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #00ff6a;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #4b976b;
+  transition: all .35s;
+}
+
+.to-link:hover{
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.to-link:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+        }
+    }
+    .display-bottom{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+    }
 }
